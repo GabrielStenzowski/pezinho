@@ -6,6 +6,7 @@ import { ProtectedRoute } from './routes/Protected-Route'
 import { RegisterPage } from './Screens/register/register-page'
 import { FooterNav } from './components/footer'
 import { Header } from './components/header'
+import { GoalsPage } from './Screens/goals/goals-page'
 
 function AppRoutes() {
   const location = useLocation()
@@ -14,23 +15,34 @@ function AppRoutes() {
   const showHeaderFooter = !hideHeaderFooterRoutes.includes(location.pathname)
 
   return (
-    <>
+    <div className="flex flex-col h-screen">
       {showHeaderFooter && <Header />}
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route
-          path="/home"
-          element={
-            <ProtectedRoute>
-              <HomePage />
-            </ProtectedRoute>
-          }
-        />
-      </Routes>
+
+      <div className="flex-1 overflow-y-auto">
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route
+            path="/home"
+            element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/goals"
+            element={
+              <ProtectedRoute>
+                <GoalsPage />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </div>
 
       {showHeaderFooter && <FooterNav />}
-    </>
+    </div>
   )
 }
 

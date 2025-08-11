@@ -10,7 +10,7 @@ export function FooterNav() {
   const tabs = [
     { label: 'Home', icon: Home, path: '/home' },
     { label: 'Relatórios', icon: BarChart2, path: '/relatorios' },
-    { label: 'Metas', icon: Goal, path: '/metas' },
+    { label: 'Metas', icon: Goal, path: '/goals' },
     { label: 'Perfil', icon: User, path: '/perfil' },
   ]
 
