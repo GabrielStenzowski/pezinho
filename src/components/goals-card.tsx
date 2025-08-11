@@ -1,4 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { dateFormat } from '@/utils/dateFormat'
+import { moneyFormat } from '@/utils/moneyFormat'
 import { TrendingUp, type LucideIcon } from 'lucide-react'
 interface GoalsCardProps {
   title: string
@@ -21,20 +23,6 @@ export function GoalsCard({
   actualValue,
   targetValue,
 }: GoalsCardProps) {
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    }).format(value)
-  }
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('pt-BR', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-    })
-  }
   const getProgressPercentage = (current: number, target: number) => {
     return Math.min(Math.round((current / target) * 100), 100)
   }
@@ -53,7 +41,7 @@ export function GoalsCard({
           </CardTitle>
           <div className="flex items-center gap-2 mt-1 text-sm text-muted-foreground">
             <Icon className={`h-4 w-4 ${iconColor}`} />
-            <span>Até {formatDate(date)}</span>
+            <span>Até {dateFormat(date)}</span>
           </div>
         </div>
         <div className="text-3xl font-bold text-foreground">
@@ -70,17 +58,17 @@ export function GoalsCard({
 
         <div className="flex justify-between text-sm mt-2">
           <span className={`${moneyColor} font-medium text-foreground`}>
-            {formatCurrency(actualValue)}
+            {moneyFormat(actualValue)}
           </span>
           <span className="text-muted-foreground">
-            de {formatCurrency(targetValue)}
+            de {moneyFormat(targetValue)}
           </span>
         </div>
 
         {reminingAmount > 0 && (
           <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
             <TrendingUp className="h-4 w-4 text-green-600" />
-            Faltam {formatCurrency(reminingAmount)}
+            Faltam {moneyFormat(reminingAmount)}
           </div>
         )}
       </CardContent>

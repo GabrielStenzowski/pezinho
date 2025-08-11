@@ -1,6 +1,7 @@
 import { ArrowBigLeft, ArrowBigRight, Calendar } from 'lucide-react'
 import { QuickActionsSection } from '../actions-select/actions-select-page'
 import { ValuePage } from '../values/values-page'
+import { RecentMovementPage } from '../recent-movement/recent-movement-page'
 
 export function HomePage() {
   return (
@@ -22,6 +23,7 @@ export function HomePage() {
       <QuickActionsSection />
       <div>
         <ValuePage />
+        <RecentMovementPage />
       </div>
     </div>
   )

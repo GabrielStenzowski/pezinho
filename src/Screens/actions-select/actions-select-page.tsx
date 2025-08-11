@@ -4,7 +4,6 @@ import {
   PlusCircle,
   ArrowDownCircle,
   Target,
-  BarChart2,
   CalendarCheck2,
   Tags,
 } from 'lucide-react'
@@ -26,11 +25,7 @@ export function QuickActionsSection() {
       icon: Target,
       onClick: () => console.log('Nova Meta'),
     },
-    {
-      label: 'Relatórios',
-      icon: BarChart2,
-      onClick: () => console.log('Relatórios'),
-    },
+
     {
       label: 'Planejamento',
       icon: CalendarCheck2,
@@ -48,7 +43,7 @@ export function QuickActionsSection() {
       <div className="max-w-6xl mx-auto border-2 bg-border-gray-300 rounded-lg p-6">
         <h2 className="text-lg font-semibold mb-4">Ações Rápidas</h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-4">
           {actions.map((action) => (
             <ButtonAction
               key={action.label}
