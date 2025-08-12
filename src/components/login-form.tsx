@@ -110,12 +110,14 @@ export function LoginForm({
               </div>
             </div>
           </div>
-          <div className="bg-muted relative hidden md:block">
-            {/* <img
-              src="/placeholder.svg"
+          <div className="bg-muted relative hidden md:block border-l-2">
+            <img
+              // src="../public/wallpaper.jpeg"
+              // src="../public/second_wallpaper.png"
+              src="../public/third_wallpaper.png"
               alt="Image"
               className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
-            /> */}
+            />
           </div>
         </CardContent>
       </Card>

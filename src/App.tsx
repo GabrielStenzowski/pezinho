@@ -7,6 +7,7 @@ import { RegisterPage } from './Screens/register/register-page'
 import { FooterNav } from './components/footer'
 import { Header } from './components/header'
 import { GoalsPage } from './Screens/goals/goals-page'
+import { ProfilePage } from './Screens/profile/profile-page'
 
 function AppRoutes() {
   const location = useLocation()
@@ -35,6 +36,14 @@ function AppRoutes() {
             element={
               <ProtectedRoute>
                 <GoalsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <ProfilePage />
               </ProtectedRoute>
             }
           />

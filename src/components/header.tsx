@@ -15,7 +15,7 @@ export function Header() {
 
   return (
     <header className="bg-gray-100 border-b border-borde p-4 shadow-soft w-full overflow-x-hidden">
-      <div className="max-w-7xl mx-auto w-full flex items-start sm:items-center justify-between gap-4 flex-wrap">
+      <div className="max-w-full mx-auto w-full flex items-start sm:items-center justify-between gap-4 flex-wrap">
         <div className="flex items-center gap-3 flex-1 min-w-0">
           <Avatar className="h-10 w-10 shrink-0">
             <AvatarFallback className="bg-black text-primary-foreground">

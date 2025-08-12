@@ -1,6 +1,6 @@
-# Pezinho — Front-end 👣💰
+# Porquinho — Front-end 👣💰
 
-**Pezinho** é um aplicativo de controle financeiro pessoal, criado para ajudar pessoas a gerenciarem suas finanças de forma simples, moderna e eficiente.
+**Porquinho** é um aplicativo de controle financeiro pessoal, criado para ajudar pessoas a gerenciarem suas finanças de forma simples, moderna e eficiente.
 
 Este repositório contém **apenas o front-end da aplicação**, que está sendo desenvolvido separadamente do back-end.
 
@@ -56,8 +56,6 @@ npm run dev
 # ou
 yarn dev
 ```
-
-
 
 📄 Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais informações.
