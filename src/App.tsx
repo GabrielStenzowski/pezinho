@@ -8,6 +8,7 @@ import { FooterNav } from './components/footer'
 import { Header } from './components/header'
 import { GoalsPage } from './Screens/goals/goals-page'
 import { ProfilePage } from './Screens/profile/profile-page'
+import { ReportsPage } from './Screens/reports-and-dashboards/reports-page'
 
 function AppRoutes() {
   const location = useLocation()
@@ -44,6 +45,14 @@ function AppRoutes() {
             element={
               <ProtectedRoute>
                 <ProfilePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/reports"
+            element={
+              <ProtectedRoute>
+                <ReportsPage />
               </ProtectedRoute>
             }
           />
